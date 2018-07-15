@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import Spinner from '../spinner/spinner';
 
-import Navigation from '../navigation/navigation';
-
 import './home.css';
 
 class Home extends Component {
@@ -26,14 +24,9 @@ class Home extends Component {
         );
     }
 
-    renderHeader() {
-        return(<Navigation></Navigation>);
-      }
-
     render() {
         return (
             <div className="home-card">
-                 { this.renderHeader() }
                 <div className={this.state.showSpinner}>
                     {this.renderSpinner()}
                 </div>

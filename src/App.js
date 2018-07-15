@@ -3,14 +3,22 @@ import { Route } from 'react-router-dom';
 import Home from './home/home';
 import './App.css';
 
+
+import Navigation from './navigation/navigation';
+
 import Particles from 'react-particles-js';
 
 
 class App extends Component {
 
+  renderHeader() {
+    return(<Navigation></Navigation>);
+  }
+
   render() {
     return (
       <div className="App">
+         { this.renderHeader() }
         <Particles 
               params={{
             		particles: {
@@ -35,6 +43,11 @@ class App extends Component {
               }}
             />
         <Route path="/" exact component={Home} />
+        <Route path="/cv" exact component={Home} />
+        <Route path="/skill" exact component={Home} />
+        <Route path="/timeline" exact component={Home} />
+        <Route path="/blog" exact component={Home} />
+        <Route path="/contact" exact component={Home} />
        </div>
     );
   }
