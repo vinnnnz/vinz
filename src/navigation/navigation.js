@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './navigation.css';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -20,12 +20,12 @@ class Navigation extends Component {
         return(
             <div className="navigation">
                 <a className='link colored'>Menu <span className="leftArrow"></span></a>
-                <Link className='link' to="/"><FontAwesomeIcon icon={['fa', 'home']} /> Home</Link>
-                <Link className='link' to="/cv"><FontAwesomeIcon icon={['fa', 'file-alt']} /> CV</Link>
-                <Link className='link' to="/skill"><FontAwesomeIcon icon={['fa', 'ruler']} /> Skills</Link>
-                <Link className='link' to="/timeline"><FontAwesomeIcon icon={['fa', 'calendar-alt']} />Timeline</Link>
-                <Link className='link' to="/blog"><FontAwesomeIcon icon={['fa', 'pencil-alt']} /> Blog</Link>
-                <Link className='link' to="/contact"><FontAwesomeIcon icon={['fa', 'envelope']} /> Contact</Link>
+                <NavLink className='link' activeclassname="active" to="/home"><FontAwesomeIcon icon={['fa', 'home']} /> Home</NavLink>
+                <NavLink className='link' activeclassname="active" to="/cv"><FontAwesomeIcon icon={['fa', 'file-alt']} /> CV</NavLink>
+                <NavLink className='link'  activeclassname="active" to="/skill"><FontAwesomeIcon icon={['fa', 'ruler']} /> Skills</NavLink>
+                <NavLink className='link'  activeclassname="active" to="/timeline"><FontAwesomeIcon icon={['fa', 'calendar-alt']} />Timeline</NavLink>
+                <NavLink className='link' activeclassname="active" to="/blog"><FontAwesomeIcon icon={['fa', 'pencil-alt']} /> Blog</NavLink>
+                <NavLink className='link' activeclassname="active" to="/contact"><FontAwesomeIcon icon={['fa', 'envelope']} /> Contact</NavLink>
             </div>
         );
     }

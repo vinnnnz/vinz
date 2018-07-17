@@ -42,12 +42,13 @@ class App extends Component {
                 zIndex: '-1' 
               }}
             />
+        
         <Route path="/" exact component={Home} />
-        <Route path="/cv" exact component={Home} />
-        <Route path="/skill" exact component={Home} />
-        <Route path="/timeline" exact component={Home} />
-        <Route path="/blog" exact component={Home} />
-        <Route path="/contact" exact component={Home} />
+        <Route path="/cv" component={Home} />
+        <Route path="/skill" component={Home} />
+        <Route path="/timeline" component={Home} />
+        <Route path="/blog" component={Home} />
+        <Route path="/contact" component={Home} />
        </div>
     );
   }
