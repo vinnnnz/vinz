@@ -31,8 +31,8 @@ class Home extends Component {
                     {this.renderSpinner()}
                 </div>
                 <div className="author">
-                    <div className="author-fname">Vineet</div>
-                    <div className="author-lname">Kumar</div>
+                    <div className="author-name">VINEET KUMAR</div>
+                    <div className="hrl"></div>
                 </div>
 
                 <div className="intro">
