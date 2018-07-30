@@ -44,6 +44,7 @@ class App extends Component {
             />
         
         <Route path="/" exact component={Home} />
+        <Route path="/home" component={Home} />
         <Route path="/cv" component={Home} />
         <Route path="/skill" component={Home} />
         <Route path="/timeline" component={Home} />
