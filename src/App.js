@@ -7,6 +7,8 @@ import './App.css';
 import Navigation from './navigation/navigation';
 
 import Particles from 'react-particles-js';
+import CV from './cv/cv';
+import Skill from './skill/skill';
 
 
 class App extends Component {
@@ -45,8 +47,8 @@ class App extends Component {
         
         <Route path="/" exact component={Home} />
         <Route path="/home" component={Home} />
-        <Route path="/cv" component={Home} />
-        <Route path="/skill" component={Home} />
+        <Route path="/cv" component={CV} />
+        <Route path="/skill" component={Skill} />
         <Route path="/timeline" component={Home} />
         <Route path="/blog" component={Home} />
         <Route path="/contact" component={Home} />
