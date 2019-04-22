@@ -14,8 +14,8 @@ class Home extends Component {
             current_length: 0,
             fadeBuffer: false,
             messages: [
-                'I\'m Software Developer',
-                "I\'m UI Developer"
+                'Software Developer',
+                "UI Developer"
             ]
         };
     }
@@ -118,7 +118,7 @@ class Home extends Component {
                 <div className={this.state.showSpinner}>
                     {this.renderSpinner()}
                 </div>
-                <span ref='rotatingTextNode' className='home-text-rotate'>hellow</span>
+                <span className='home-text-rotate'><span>I'm </span><span ref='rotatingTextNode'></span></span>
             </div>
         );
     }

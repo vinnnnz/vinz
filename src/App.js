@@ -5,8 +5,6 @@ import './App.css';
 
 
 import Navigation from './navigation/navigation';
-
-import Particles from 'react-particles-js';
 import CV from './cv/cv';
 import Skill from './skill/skill';
 
@@ -21,30 +19,6 @@ class App extends Component {
     return (
       <div className="App">
          { this.renderHeader() }
-        <Particles 
-              params={{
-            		particles: {
-            			line_linked: {
-            				shadow: {
-            					enable: true,
-            					color: "#3CA9D1",
-            					blur: 5
-            				}
-            			}
-            		}
-            	}}
-              style={{
-                width: '100%',
-                background: '#009988',
-                position: 'fixed',
-                left: '0',
-                top: '0',
-                right: '0',
-                bottom: '0',
-                zIndex: '-1' 
-              }}
-            />
-        
         <Route path="/" exact component={Home} />
         <Route path="/home" component={Home} />
         <Route path="/cv" component={CV} />

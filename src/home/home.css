@@ -8,5 +8,9 @@
 .home-text-rotate {
     font-family: 'Raleway', sans-serif;
     font-weight: 100;
-    color: #FFFFFF;
+    position: relative;
+    top: 47%;
+    color: #000000;
+    font-size: 1.5em;
+    letter-spacing: 5px;
 }
