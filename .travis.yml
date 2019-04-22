@@ -1,0 +1,9 @@
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t sonuviz/vinz -f Dockerfile.dev .
+
+script:
+  - docker run sonuviz/vinz npm run test -- --coverage
