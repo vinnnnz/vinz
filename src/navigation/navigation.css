@@ -10,17 +10,18 @@
 
 .link {
   text-decoration: none;
-  background: #FFFFFF;
-  display: inline-block;
-  flex: 1;
-  line-height: 30px;
-  font-family: 'dosis';
-  color: #9f07b4;
-  font-size: 12px;
+    background: #FFFFFF;
+    display: inline-block;
+    -ms-flex: 1 1;
+    flex: 1 1;
+    line-height: 30px;
+    font-family: 'Raleway';
+    font-size: 12px;
+    font-weight: 500;
 }
 
 .link.colored {
-  background: rgb(160, 7, 180);
+  background: #42096d;
   color: #FFFFFF;
   font-family: 'dosis';
 }
@@ -40,5 +41,5 @@
 }
 
 .active {
-  border-bottom: 2px solid #9f07b4;
+  border-bottom: 2px solid #42096d;
 }

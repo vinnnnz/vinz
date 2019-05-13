@@ -1,8 +1,42 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,800,700,900');
 
 .home-card {
     width: 100%;
     height: 100%;
+    background: #f2f5f5;
+}
+
+.author {
+    width: 350px;
+    margin: 0 auto;
+    position: relative;
+    top: 30%;
+}
+
+.author-txt {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.8em;
+    font-size: 18px;
+    color: #42096d;
+}
+
+.image-wrapper {
+    margin-bottom: 15px;
+}
+
+.author-image {
+    width: 100px;
+    height: 100px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: center right;
+    object-position: center right;
+    border-radius: 10px 100px 100px 10px;
+    -webkit-box-shadow: 0px 0px 5px #000;
+    box-shadow: 0px 0px 5px #000;
+    border: thin solid #42096d;
+    border-right: 8px solid #42096d;
 }
 
 .home-text-rotate {
@@ -11,6 +45,16 @@
     position: relative;
     top: 47%;
     color: #000000;
-    font-size: 1.5em;
+    font-size: 1em;
     letter-spacing: 5px;
+    left: 140px;
+    color: #42096d;
+}
+
+.author-name {
+    font-size: 2em;
+    letter-spacing: 6px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 200;
+    margin-bottom: 15px;
 }

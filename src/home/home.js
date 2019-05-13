@@ -9,14 +9,17 @@ class Home extends Component {
         super();
         this.state = {
             showSpinner: 'show',
-            codeletters: "01",
+            codeletters: ".",
             message: 0,
             current_length: 0,
             fadeBuffer: false,
             messages: [
                 'Software Developer',
-                "UI Developer"
-            ]
+                "UI Developer",
+                "Full Stack developer"
+            ],
+
+            animations: []
         };
     }
 
@@ -54,7 +57,7 @@ class Home extends Component {
           }
           
           var message = this.generateRandomString(this.state.current_length);
-          this.refs.rotatingTextNode.innerHTML = message;
+          if(this.refs.rotatingTextNode) this.refs.rotatingTextNode.innerHTML = message;
           
           setTimeout(() => {this.animateIn();}, 20);
         } else { 
@@ -64,7 +67,7 @@ class Home extends Component {
       
       animateFadeBuffer(){
         if(this.state.fadeBuffer === false){
-            this.state.fadeBuffer = [];
+            this.setState({fadeBuffer: []});
           for(var i = 0; i < this.state.messages[this.state.message].length; i++){
             this.state.fadeBuffer.push({c: (Math.floor(Math.random()*12))+1, l: this.state.messages[this.state.message].charAt(i)});
           }
@@ -73,8 +76,8 @@ class Home extends Component {
         var do_cycles = false;
         var message = ''; 
         
-        for(var i = 0; i < this.state.fadeBuffer.length; i++){
-          var fader = this.state.fadeBuffer[i];
+        for(var index = 0; index < this.state.fadeBuffer.length; index++){
+          var fader = this.state.fadeBuffer[index];
           if(fader.c > 0){
             do_cycles = true;
             fader.c--;
@@ -84,24 +87,33 @@ class Home extends Component {
           }
         }
         
-        this.refs.rotatingTextNode.innerHTML = message;
+        if(this.refs.rotatingTextNode) this.refs.rotatingTextNode.innerHTML = message;
         
         if(do_cycles === true){
-          setTimeout(() => {this.animateFadeBuffer();}, 50);
+          setTimeout(() => {this.animateFadeBuffer();}, 1 );
         } else {
           setTimeout(()=> {this.cycleText();}, 2000);
         }
       };
       
       cycleText(){
-        this.state.message = this.state.message + 1;
+        this.setState({
+          message : this.state.message + 1
+        })
+
         if(this.state.message >= this.state.messages.length){
-            this.state.message = 0;
+            this.setState({
+              message : 0
+            });
         }
         
-        this.state.current_length = 0;
-        this.state.fadeBuffer = false;
-        this.refs.rotatingTextNode.innerHTML = '';
+        this.setState({
+          current_length: 0,
+          fadeBuffer: false
+        });
+
+        if(this.refs.rotatingTextNode)
+          this.refs.rotatingTextNode.innerHTML = '';
         
         setTimeout(() => {this.animateIn(); }, 200);
       }
@@ -118,7 +130,13 @@ class Home extends Component {
                 <div className={this.state.showSpinner}>
                     {this.renderSpinner()}
                 </div>
-                <span className='home-text-rotate'><span>I'm </span><span ref='rotatingTextNode'></span></span>
+                <div className="author">
+                  <div className="image-wrapper">
+                    <img className="author-image" src={process.env.PUBLIC_URL + '/images/author-image.jpg'} alt="Not supported" /><span className="author-txt"> eveloper</span>
+                  </div>
+                  <div className='author-name'>VINEET KUMAR</div>
+                  <span className='home-text-rotate'><span>I'm </span><span ref='rotatingTextNode'></span></span>
+                </div>
             </div>
         );
     }

@@ -1,0 +1,26 @@
+svg {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .node circle {
+    fill: #fff;
+    stroke: rgb(71, 16, 173);
+    stroke-width: 1px;
+    padding: 10px;
+  }
+  
+  .node text {
+    font: 12px sans-serif;
+    font-family: 'Raleway';
+    font-weight: 200;
+    letter-spacing: 0.1em;
+    z-index: 100;
+  }
+  
+  .link {
+    fill: none;
+    stroke: rgb(71, 16, 173);
+    stroke-width: 1px;
+    z-index: -1;
+  }
