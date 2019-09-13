@@ -37,6 +37,6 @@ const Gist = () => {
             {renderGistList()}
         </div>
     );
-}
+};
 
 export default Gist;

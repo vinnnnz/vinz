@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Spinner from '../spinner/spinner';
 
 import './home.css';
+import image from '../images/author-image.jpg';
 
 class Home extends Component {
 
@@ -132,7 +133,7 @@ class Home extends Component {
                 </div>
                 <div className="author">
                   <div className="image-wrapper">
-                    <img className="author-image" src={process.env.PUBLIC_URL + '/images/author-image.jpg'} alt="Not supported" /><span className="author-txt"> eveloper</span>
+                    <img className="author-image" src={image} alt="Not supported" /><span className="author-txt"> eveloper</span>
                   </div>
                   <div className='author-name'>VINEET KUMAR</div>
                   <span className='home-text-rotate'><span>I'm </span><span ref='rotatingTextNode'></span></span>
