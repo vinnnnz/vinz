@@ -1,0 +1,17 @@
+.cv_parent {
+    overflow-y: scroll;
+}
+
+.author-header {
+    width: 100%;
+    height: 100px;
+    background: #E6E6E6;
+    position: relative;
+}
+
+.first-name {
+    font-size: 3em;
+    font-weight: 200;
+    font-family: raleway;
+    color: #757575;
+}

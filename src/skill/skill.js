@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import TreeChart from '../vis/tree-chart';
 import skills from './skill-data/skill-data';
 import './skill.css';
 
@@ -8,7 +7,6 @@ class Skill extends Component {
     render() { 
         return ( 
             <div className="skill-card">
-                    <TreeChart data={skills}/>
         </div>
          );
     }

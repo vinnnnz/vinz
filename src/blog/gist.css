@@ -1,0 +1,11 @@
+.gist-ui-wrapper {
+    background: #f2f5f5;
+}
+.gist .gist-meta {
+    background-color: #2f0c67 !important;
+    color: #e6e6e6 !important;
+}
+
+.gist .gist-meta a {
+    color: #e6e6e6 !important;
+}

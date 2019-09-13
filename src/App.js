@@ -4,9 +4,12 @@ import Home from './home/home';
 import './App.css';
 
 
+
 import Navigation from './navigation/navigation';
 import CV from './cv/cv';
 import Skill from './skill/skill';
+import Gist from './blog/gist';
+import Contact from './contact/contact';
 
 
 class App extends Component {
@@ -17,15 +20,16 @@ class App extends Component {
 
   render() {
     return (
+      
       <div className="App">
          { this.renderHeader() }
-        <Route path="/" exact component={Home} />
-        <Route path="/home" component={Home} />
-        <Route path="/cv" component={CV} />
-        <Route path="/skill" component={Skill} />
-        <Route path="/timeline" component={CV} />
-        <Route path="/blog" component={CV} />
-        <Route path="/contact" component={CV} />
+          <Route path="/" exact component={Home} />
+          <Route path="/home" component={Home} />
+          <Route path="/cv" component={CV} />
+          <Route path="/skill" component={Skill} />
+          <Route path="/timeline" component={CV} />
+          <Route path="/gists" component={Gist} />
+          <Route path="/contact" component={Contact} />
        </div>
     );
   }
