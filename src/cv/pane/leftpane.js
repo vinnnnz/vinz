@@ -115,7 +115,7 @@ const LeftPane = () => {
     )
 
     return (
-        <div style={{width: '20%', height: '100%', background: '#181919', display: 'flex', flexDirection: 'column', overflowY: 'auto', float: 'left'}}>
+        <div style={{width: '20%', minWidth: 250, height: '100%', background: '#181919', display: 'flex', flexDirection: 'column', overflowY: 'auto', float: 'left'}}>
             {renderProfile()}
         </div>
     );
