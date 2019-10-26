@@ -71,7 +71,7 @@ const renderRightPane = () => (
 
 const RightPane = () => {
     return (
-        <div className="rightPane" style={{width: '75%', marginLeft: 20, float: 'right'}}>
+        <div className="rightPane" style={{width: '75%', minWidth: 450, marginLeft: 20, float: 'right'}}>
             {renderRightPane()}
         </div>
     );
