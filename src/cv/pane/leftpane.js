@@ -20,7 +20,7 @@ const LeftPane = () => {
 
     const renderProfile = () => (
         <Fragment>
-            <img src={image} style={{width: '80px', height: '80px', borderRadius: '50%', margin: '0 auto', marginTop: '10px', }}/>
+            <img src={image} alt="Author" style={{width: '80px', height: '80px', borderRadius: '50%', margin: '0 auto', marginTop: '10px', }}/>
             <div style={{color: 'antiquewhite', fontFamily: "'Raleway', sans-serif", letterSpacing: '5px', marginTop: '5px'}}>VINEET KUMAR</div>
             <div style={{color: 'antiquewhite', fontFamily: "'Raleway', sans-serif", letterSpacing: '1px', fontSize: '9px'}}>SOFTWARE DEVELOPER</div>
             <div>

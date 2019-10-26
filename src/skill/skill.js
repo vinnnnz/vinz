@@ -111,7 +111,7 @@ class Skill extends React.Component {
               <Tree
                 root={hierarchy(data, d => (d.isExpanded ? null : d.children))}
                 size={[sizeWidth, sizeHeight]}
-                separation={(a, b) => (a.parent == b.parent ? 1 : 0.5) / a.depth}
+                separation={(a, b) => (a.parent === b.parent ? 1 : 0.5) / a.depth}
               >
                 {data => (
                   <Group top={origin.y} left={origin.x}>
