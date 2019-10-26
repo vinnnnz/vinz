@@ -1,12 +1,13 @@
 .contact-wrapper {
     background: #181919;
     height: 100%;
+    overflow: auto;
 }
 
 .contact-form {
     width: 500px;
     margin: 0 auto;
-    top: 100px;
+    top: 50px;
     position: relative;
     background: #313840;
     padding: 20px;
