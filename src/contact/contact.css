@@ -1,0 +1,59 @@
+.contact-wrapper {
+    background: #181919;
+    height: 100%;
+}
+
+.contact-form {
+    width: 500px;
+    margin: 0 auto;
+    top: 100px;
+    position: relative;
+    background: #313840;
+    padding: 20px;
+}
+
+.contact-form div {
+    font-weight: 100;
+    color: antiquewhite;
+    font-size: 20px;
+    font-family: 'Raleway', sans-serif;
+    padding-bottom: 30px;
+}
+
+.contact-form input {
+    border: none;
+    background: none;
+    border-bottom: thin solid antiquewhite;
+    outline: none;
+    font-weight: 100;
+    color: antiquewhite;
+    margin-left: 10px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+}
+
+.contact-form textarea {
+    border: none;
+    background: none;
+    border-bottom: thin solid antiquewhite;
+    outline: none;
+    font-weight: 100;
+    color: antiquewhite;
+    margin-left: 10px;
+    width: 93%;
+    resize: none;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+}
+
+.contact-form button {
+    background: transparent;
+    border: thin solid antiquewhite;
+    padding: 10px;
+    border-radius: 2px;
+    color: antiquewhite;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+    width: 125px;
+    outline: none;
+}

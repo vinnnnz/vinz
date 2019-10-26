@@ -11,7 +11,7 @@
 
 .link {
   text-decoration: none;
-    background: #FFFFFF;
+    background: #353434;
     display: inline-block;
     -ms-flex: 1 1;
     flex: 1 1;
@@ -22,7 +22,7 @@
 }
 
 .link.colored {
-  background: #42096d;
+  background: #4a494a;
   color: #FFFFFF;
   font-family: 'dosis';
 }
@@ -33,7 +33,7 @@
   height: 0px;
   border-top: 18px solid transparent;
   border-bottom: 13px solid transparent;
-  border-right: 45px solid #ffffff;
+  border-right: 45px solid #353434;
   float: right;
 }
 
@@ -42,5 +42,5 @@
 }
 
 .active {
-  border-bottom: 2px solid #42096d;
+  border-bottom: 2px solid #FFFFFF;
 }

@@ -6,6 +6,10 @@
     color: #e6e6e6 !important;
 }
 
+.gist .gist-file {
+    border: thin solid #3c178e !important;
+}
+
 .gist .gist-meta a {
     color: #e6e6e6 !important;
 }

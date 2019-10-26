@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './cv.css';
+import LeftPane from './pane/leftpane';
+import RightPane from './pane/rightpane';
 
 class CV extends Component {
    
@@ -11,10 +13,9 @@ class CV extends Component {
     
     render() { 
         return ( 
-            <div id="cv_parent">
-                <div className="author-header">
-                    <span className='first-name'>VINEET</span><span className='last-name'>KUMAR</span>
-                </div>
+            <div id="cv_paper">
+                <LeftPane />
+                <RightPane />
             </div>
          );
     }

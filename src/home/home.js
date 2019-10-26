@@ -15,7 +15,7 @@ class Home extends Component {
             current_length: 0,
             fadeBuffer: false,
             messages: [
-                'Software Developer',
+                "Software Developer",
                 "UI Developer",
                 "Full Stack developer"
             ],
