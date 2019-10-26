@@ -23,7 +23,6 @@ class Navigation extends Component {
                 <NavLink className='link' activeclassname="active" to="/home"><FontAwesomeIcon icon={['fa', 'home']} /> Home</NavLink>
                 <NavLink className='link' activeclassname="active" to="/cv"><FontAwesomeIcon icon={['fa', 'file-alt']} /> CV</NavLink>
                 <NavLink className='link'  activeclassname="active" to="/skill"><FontAwesomeIcon icon={['fa', 'ruler']} /> Skills</NavLink>
-                <NavLink className='link'  activeclassname="active" to="/timeline"><FontAwesomeIcon icon={['fa', 'calendar-alt']} />Timeline</NavLink>
                 <NavLink className='link' activeclassname="active" to="/gists"><FontAwesomeIcon icon={['fa', 'pencil-alt']} /> Gists</NavLink>
                 <NavLink className='link' activeclassname="active" to="/contact"><FontAwesomeIcon icon={['fa', 'envelope']} /> Contact</NavLink>
             </div>

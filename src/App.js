@@ -27,7 +27,6 @@ class App extends Component {
           <Route path="/home" component={Home} />
           <Route path="/cv" component={CV} />
           <Route path="/skill" component={Skill} />
-          <Route path="/timeline" component={CV} />
           <Route path="/gists" component={Gist} />
           <Route path="/contact" component={Contact} />
        </div>
