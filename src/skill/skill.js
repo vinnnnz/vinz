@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Group } from '@vx/group';
 import { Tree } from '@vx/hierarchy';
 import { LinearGradient } from '@vx/gradient';
@@ -23,27 +23,25 @@ import {
 import data from './skill-data/skill-data';
 import './skill.css';
 
-class Skill extends React.Component {
-    state = {
-      layout: 'cartesian',
-      orientation: 'horizontal',
-      linkType: 'diagonal',
-      stepPercent: 1
-    };
-  
-    render() {
+const Skill = (props) => {
+
+    const [layout] = useState('polar');
+    const [orientation] = useState('horizontal');
+    const [linkType] = useState('line');
+    const [stepPercent] = useState(1);
+    const [, forceUpdate] = useState(0);
+
       const {
         width = 1300,
         height = 850,
         margin = {
-          top: 30,
-          left: 30,
-          right: 30,
-          bottom: 30
+          top: 100,
+          left: 100,
+          right: 100,
+          bottom: 100
         }
-      } = this.props;
+      } = props;
       
-      const { layout, orientation, linkType, stepPercent } = this.state;
   
       const innerWidth = width - margin.left - margin.right;
       const innerHeight = height - margin.top - margin.bottom;
@@ -71,8 +69,8 @@ class Skill extends React.Component {
       }
   
       return (
-        <div style={{background: '#181919', marginBottom: 30, overflow: 'auto'}}>
-          <div style={{ color: 'rgba(38, 150, 136, 1.000)', fontSize: 10 }}>
+        <div style={{background: '#181919', marginBottom: 30, overflow: 'auto', height: '100%'}}>
+          {/* <div style={{ color: 'rgba(38, 150, 136, 1.000)', fontSize: 10 }}>
             <label style={{marginLeft: 20}}>layout:</label>
             <select style={{marginLeft: 10}}
               onClick={e => e.stopPropagation()}
@@ -102,11 +100,11 @@ class Skill extends React.Component {
               <option value="curve">curve</option>
               <option value="line">line</option>
             </select>
-          </div>
+          </div> */}
   
           <svg width={width} height={height}>
             <LinearGradient id="lg" from="#fd9b93" to="#fe6e9e" />
-            <rect width={width} height={height} rx={14} fill="#272b4d" />
+            <rect width={width} height={height} rx={14} fill="#181919" />
             <Group top={margin.top} left={margin.left}>
               <Tree
                 root={hierarchy(data, d => (d.isExpanded ? null : d.children))}
@@ -193,10 +191,10 @@ class Skill extends React.Component {
                             <circle
                               r={12}
                               fill="url('#lg')"
-                              onClick={() => {
+                              onClick={(e) => {
                                 node.data.isExpanded = !node.data.isExpanded;
                                 console.log(node);
-                                this.forceUpdate();
+                                forceUpdate(n => !n);
                               }}
                             />
                           )}
@@ -212,10 +210,10 @@ class Skill extends React.Component {
                               strokeDasharray={!node.data.children ? '2,2' : '0'}
                               strokeOpacity={!node.data.children ? 0.6 : 1}
                               rx={!node.data.children ? 10 : 0}
-                              onClick={() => {
+                              onClick={(e) => {
                                 node.data.isExpanded = !node.data.isExpanded;
                                 console.log(node);
-                                this.forceUpdate();
+                                forceUpdate(n => !n);
                               }}
                             />
                           )}
@@ -239,7 +237,6 @@ class Skill extends React.Component {
           </svg>
         </div>
       );
-    }
   }
  
 export default Skill;

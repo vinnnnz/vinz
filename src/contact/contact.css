@@ -47,7 +47,7 @@
     font-weight: 100;
 }
 
-.contact-form button {
+.contact-form button, .contact-form a {
     background: transparent;
     border: thin solid antiquewhite;
     padding: 10px;

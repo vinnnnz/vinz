@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Route } from 'react-router-dom';
 import Home from './home/home';
 import './App.css';
@@ -12,26 +12,24 @@ import Gist from './blog/gist';
 import Contact from './contact/contact';
 
 
-class App extends Component {
+const App = () => {
 
-  renderHeader() {
-    return(<Navigation></Navigation>);
+  const renderHeader = () => {
+    return (<Navigation></Navigation>);
   }
 
-  render() {
-    return (
-      
-      <div className="App">
-         { this.renderHeader() }
-          <Route path="/" exact component={Home} />
-          <Route path="/home" component={Home} />
-          <Route path="/cv" component={CV} />
-          <Route path="/skill" component={Skill} />
-          <Route path="/gists" component={Gist} />
-          <Route path="/contact" component={Contact} />
-       </div>
-    );
-  }
+  return (
+
+    <div className="App">
+      { renderHeader()}
+      <Route path="/" exact component={Home} />
+      <Route path="/home" component={Home} />
+      <Route path="/cv" component={CV} />
+      <Route path="/skill" component={Skill} />
+      <Route path="/gists" component={Gist} />
+      <Route path="/contact" component={Contact} />
+    </div>
+  );
 }
 
 export default App;

@@ -1,15 +1,20 @@
 .gist-ui-wrapper {
-    background: #f2f5f5;
+    background: #181919;
+    padding: 20px;
 }
 .gist .gist-meta {
-    background-color: #2f0c67 !important;
-    color: #e6e6e6 !important;
+    background-color: #333333 !important;
+    color: antiquewhite !important;
 }
 
 .gist .gist-file {
-    border: thin solid #3c178e !important;
+    border: thin solid#333333 !important;
 }
 
 .gist .gist-meta a {
-    color: #e6e6e6 !important;
+    color: antiquewhite !important;
+}
+
+.gist .gist-data {
+    border-radius: 0px !important;
 }

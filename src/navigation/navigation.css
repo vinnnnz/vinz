@@ -9,6 +9,11 @@
   z-index: 1;
 }
 
+.navigation a {
+
+  color: antiquewhite;
+}
+
 .link {
   text-decoration: none;
     background: #353434;
@@ -42,5 +47,5 @@
 }
 
 .active {
-  border-bottom: 2px solid #FFFFFF;
+  border-top: 3px solid #22d2ba;
 }
